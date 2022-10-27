@@ -9,6 +9,7 @@ public class App {
 
         car = Colors.WHITE;
 
+
         // "RED" "red" "Red"
 
         SchoolType newDorpHighSchool = SchoolType.PUBLIC;
