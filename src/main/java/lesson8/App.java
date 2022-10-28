@@ -39,9 +39,9 @@ public class App {
         myCar.make="Toyota";
         myCar.color = Color.PINK;
 
-//        anna.hi();
-//        david.hi();
-//        steve.hi();
+        anna.hi();
+        david.hi();
+        steve.hi();
 //
 //        alex.hello("Jane");
 
