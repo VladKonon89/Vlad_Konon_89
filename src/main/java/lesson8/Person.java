@@ -5,6 +5,8 @@ public class Person {
     public String lastName;
     public int year;
 
+    public Person(){}
+
     public void hi(){
         System.out.println("Hi, my name is "+this.name+", nice to meet you");
     }
