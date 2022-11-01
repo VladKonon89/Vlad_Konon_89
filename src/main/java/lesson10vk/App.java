@@ -2,9 +2,9 @@ package lesson10vk;
 
 public class App {
     public static void main(String[] args) {
-        String a = new String("Hello");
-        char[] xx = {'h','e','l','l','o'};
-        String hello = new String(xx);
+//        String a = new String("Hello");
+//        char[] xx = {'h','e','l','l','o'};
+//        String hello = new String(xx);
 
         Address annaAddress = new Address("12 Sun str","Irvine",99874,State.CA);
         Person anna = new Person("Anna","Senna",annaAddress, 1985);
