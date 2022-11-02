@@ -8,7 +8,6 @@ public class App {
         anna.setYear(1922);
         anna.setLastName("Wilson");
 
-
         Person david = new Person("David","Peterson",1996);
 
         Person steve = new Person("Steve","Harvey");

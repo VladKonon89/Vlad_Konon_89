@@ -6,12 +6,12 @@ public class Person {
     private int year;
 
     public Person(String name, String lastName, int year){
-        this.name=name;
-        this.year=year;
+        setName(name);
+        setYear(year);
         this.lastName=lastName;
     }
     public Person(String name, String lastName){
-        this.name=name;
+        setName(name);
         this.lastName=lastName;
     }
 

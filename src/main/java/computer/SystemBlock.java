@@ -4,6 +4,7 @@ public class SystemBlock {
     private PowerSupply powerSupply;
     private Disk disk;
     private Motherboard motherboard;
+<<<<<<< HEAD
 
     public PowerSupply getPowerSupply() {
         return powerSupply;
@@ -43,4 +44,6 @@ public class SystemBlock {
                 ", motherboard=" + motherboard +
                 '}';
     }
+=======
+>>>>>>> origin/main
 }

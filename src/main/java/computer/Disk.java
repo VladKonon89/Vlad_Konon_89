@@ -5,6 +5,7 @@ public class Disk {
     private int size;
     private String make;
     private String model;
+<<<<<<< HEAD
     //complete class: constructor 1, g/s, toString()
 
 
@@ -57,4 +58,7 @@ public class Disk {
                 '}';
     }
 
+=======
+    // complete class - constructor, g/s, toString()
+>>>>>>> origin/main
 }
