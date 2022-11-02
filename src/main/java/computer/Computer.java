@@ -7,7 +7,6 @@ public class Computer {
     private Mouse mouse;
     private Monitor monitor;
     private SystemBlock systemBlock;
-<<<<<<< HEAD
     //complete class
 
 
@@ -79,8 +78,4 @@ public class Computer {
                 ", systemBlock=" + systemBlock +
                 '}';
     }
-=======
-    // complete class
-
->>>>>>> origin/main
 }

@@ -4,7 +4,6 @@ public class CPU {
     private int frequency;
     private String make;
     private String model;
-<<<<<<< HEAD
     //complete class: constructor 1, g/s, toString()
 
 
@@ -46,7 +45,4 @@ public class CPU {
                 ", model='" + model + '\'' +
                 '}';
     }
-=======
-    // complete class - constructor, g/s, toString()
->>>>>>> origin/main
 }

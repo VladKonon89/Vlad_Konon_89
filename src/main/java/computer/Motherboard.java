@@ -6,7 +6,6 @@ public class Motherboard {
     private CPU cpu;
     private String make;
     private String model;
-<<<<<<< HEAD
     //complete class: constructor 1, g/s, toString()
 
 
@@ -68,7 +67,4 @@ public class Motherboard {
                 ", model='" + model + '\'' +
                 '}';
     }
-=======
-    // complete class - constructor, g/s, toString()
->>>>>>> origin/main
 }

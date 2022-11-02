@@ -3,11 +3,7 @@ package computer;
 public class Keyboard {
     private String make;
     private String model;
-<<<<<<< HEAD
     //add toString()
-=======
-    // add toString()
->>>>>>> origin/main
 
     public Keyboard(String make, String model) {
         this.make = make;
@@ -21,7 +17,6 @@ public class Keyboard {
     public String getModel() {
         return model;
     }
-<<<<<<< HEAD
 
     @Override
     public String toString() {
@@ -30,6 +25,5 @@ public class Keyboard {
                 ", model='" + model + '\'' +
                 '}';
     }
-=======
->>>>>>> origin/main
 }
+
