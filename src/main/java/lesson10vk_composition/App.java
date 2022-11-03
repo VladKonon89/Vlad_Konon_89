@@ -1,4 +1,4 @@
-package lesson10vk;
+package lesson10vk_composition;
 
 public class App {
     public static void main(String[] args) {

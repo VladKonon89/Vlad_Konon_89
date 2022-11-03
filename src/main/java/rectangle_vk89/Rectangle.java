@@ -1,6 +1,6 @@
-package rectangle;
+package rectangle_vk89;
 
-public class Rectangle {
+public class Rectangle {  // parent(basic or super) class
     private int height;
     private int width;
 
@@ -8,12 +8,15 @@ public class Rectangle {
         this.height = height;
         this.width = width;
     }
+
     public void draw(){
         System.out.println("I draw a rectangle with height = "+this.height+", width = "+this.width);
     }
+
     public int getArea(){
         return height*width;
     }
+
     public int getPerimeter(){
         return (width+height)*2;
     }
@@ -21,4 +24,5 @@ public class Rectangle {
     public int getHeight() {
         return height;
     }
+
 }

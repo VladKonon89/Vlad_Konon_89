@@ -1,4 +1,4 @@
-package lesson10vk;
+package lesson10vk_composition;
 
 public class Team {
     private Person leader;

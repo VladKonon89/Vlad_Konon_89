@@ -1,4 +1,4 @@
-package lesson10vk;
+package lesson10vk_composition;
 
 public class Address {
     private String street;
