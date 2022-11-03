@@ -1,6 +1,4 @@
-package computer;
-
-import jdk.jfr.Frequency;
+package computer_vk89;
 
 public class App {
     public static void main(String[] args) {

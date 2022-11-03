@@ -1,12 +1,11 @@
-package computer;
+package computer_vk89;
 
-public class Mouse {
+public class Keyboard {
     private String make;
     private String model;
-    //complete class: constructor 1, g/s, toString()
+    //add toString()
 
-
-    public Mouse(String make, String model) {
+    public Keyboard(String make, String model) {
         this.make = make;
         this.model = model;
     }
@@ -15,23 +14,16 @@ public class Mouse {
         return make;
     }
 
-    public void setMake(String make) {
-        this.make = make;
-    }
-
     public String getModel() {
         return model;
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
-
     @Override
     public String toString() {
-        return "Mouse{" +
+        return "Keyboard{" +
                 "make='" + make + '\'' +
                 ", model='" + model + '\'' +
                 '}';
     }
 }
+

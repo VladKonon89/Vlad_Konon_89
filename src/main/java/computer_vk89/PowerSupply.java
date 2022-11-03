@@ -1,24 +1,24 @@
-package computer;
+package computer_vk89;
 
-public class Monitor {
-    private int diagonal;
+public class PowerSupply {
+    private int power;
     private String make;
     private String model;
     //complete class: constructor 1, g/s, toString()
 
 
-    public Monitor(int diagonal, String make, String model) {
-        this.diagonal = diagonal;
+    public PowerSupply(int power, String make, String model) {
+        this.power = power;
         this.make = make;
         this.model = model;
     }
 
-    public int getDiagonal() {
-        return diagonal;
+    public int getPower() {
+        return power;
     }
 
-    public void setDiagonal(int diagonal) {
-        this.diagonal = diagonal;
+    public void setPower(int power) {
+        this.power = power;
     }
 
     public String getMake() {
@@ -39,8 +39,8 @@ public class Monitor {
 
     @Override
     public String toString() {
-        return "Monitor{" +
-                "diagonal=" + diagonal +
+        return "PowerSupply{" +
+                "power=" + power +
                 ", make='" + make + '\'' +
                 ", model='" + model + '\'' +
                 '}';

@@ -1,24 +1,24 @@
-package computer;
+package computer_vk89;
 
-public class CPU {
-    private int frequency;
+public class Monitor {
+    private int diagonal;
     private String make;
     private String model;
     //complete class: constructor 1, g/s, toString()
 
 
-    public CPU(int frequency, String make, String model) {
-        this.frequency = frequency;
+    public Monitor(int diagonal, String make, String model) {
+        this.diagonal = diagonal;
         this.make = make;
         this.model = model;
     }
 
-    public int getFrequency() {
-        return frequency;
+    public int getDiagonal() {
+        return diagonal;
     }
 
-    public void setFrequency(int frequency) {
-        this.frequency = frequency;
+    public void setDiagonal(int diagonal) {
+        this.diagonal = diagonal;
     }
 
     public String getMake() {
@@ -39,8 +39,8 @@ public class CPU {
 
     @Override
     public String toString() {
-        return "CPU{" +
-                "frequency=" + frequency +
+        return "Monitor{" +
+                "diagonal=" + diagonal +
                 ", make='" + make + '\'' +
                 ", model='" + model + '\'' +
                 '}';

@@ -1,4 +1,4 @@
-package computer;
+package computer_vk89;
 
 public class SystemBlock {
     private PowerSupply powerSupply;

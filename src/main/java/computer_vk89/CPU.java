@@ -1,34 +1,24 @@
-package computer;
+package computer_vk89;
 
-public class Disk {
-    private DiskType diskType;
-    private int size;
+public class CPU {
+    private int frequency;
     private String make;
     private String model;
     //complete class: constructor 1, g/s, toString()
 
 
-    public Disk(DiskType diskType, int size, String make, String model) {
-        this.diskType = diskType;
-        this.size = size;
+    public CPU(int frequency, String make, String model) {
+        this.frequency = frequency;
         this.make = make;
         this.model = model;
     }
 
-    public DiskType getDiskType() {
-        return diskType;
+    public int getFrequency() {
+        return frequency;
     }
 
-    public void setDiskType(DiskType diskType) {
-        this.diskType = diskType;
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
+    public void setFrequency(int frequency) {
+        this.frequency = frequency;
     }
 
     public String getMake() {
@@ -49,12 +39,10 @@ public class Disk {
 
     @Override
     public String toString() {
-        return "Disk{" +
-                "diskType=" + diskType +
-                ", size=" + size +
+        return "CPU{" +
+                "frequency=" + frequency +
                 ", make='" + make + '\'' +
                 ", model='" + model + '\'' +
                 '}';
     }
-
 }
