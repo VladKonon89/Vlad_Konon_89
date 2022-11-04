@@ -41,4 +41,8 @@ public class Player {
     public void setNumber(int number) {
         this.number = number;
     }
+
+    public void representation(){
+        System.out.println("Hello, guys, I am "+this.name+" my number is "+number);
+    }
 }
