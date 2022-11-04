@@ -1,28 +1,26 @@
 package homework11_inheritance;
 
 public class Couch extends Player {
-    private String state;
-    private String team;
+    private int year;
 
-    public Couch(String name, String lastName, String state, String team) {
-        super(name, lastName);
-        this.state = state;
-        this.team = team;
+    public Couch(String name, String lastName, int year) {
+        super(name,lastName);
+        this.year = year;
     }
 
-    public String getState() {
-        return state;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getTeam() {
-        return team;
+    public int getYear() {
+        return year;
     }
 
-    public void setTeam(String team) {
-        this.team = team;
+    public void setYear(int year) {
+        this.year = year;
     }
 }

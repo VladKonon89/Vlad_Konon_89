@@ -1,4 +1,4 @@
-package homework11_inheritance;
+package homework11_example;
 
 public class Player {
     protected String name;
@@ -9,13 +9,6 @@ public class Player {
         this.name = name;
         this.lastName = lastName;
         this.number = number;
-    }
-
-    public Player(String name) {
-
-    }
-
-    public Player(String name, String lastName) {
     }
 
     public String getName() {

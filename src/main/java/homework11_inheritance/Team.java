@@ -1,13 +1,13 @@
 package homework11_inheritance;
 
-public class Team extends Player {
+public class Team extends Player{
     private String city;
-    private String state;
+    private int quantityofPlayers;
 
-    public Team(String name, int number, String city, String state) {
-        super(name,number);
+    public Team(String name, String city, int quantityofPlayers) {
+        super(name);
         this.city = city;
-        this.state = state;
+        this.quantityofPlayers = quantityofPlayers;
     }
 
     public String getCity() {
@@ -18,11 +18,11 @@ public class Team extends Player {
         this.city = city;
     }
 
-    public String getState() {
-        return state;
+    public int getQuantityofPlayers() {
+        return quantityofPlayers;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public void setQuantityofPlayers(int quantityofPlayers) {
+        this.quantityofPlayers = quantityofPlayers;
     }
 }

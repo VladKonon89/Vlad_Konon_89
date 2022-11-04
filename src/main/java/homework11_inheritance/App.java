@@ -1,13 +1,12 @@
 package homework11_inheritance;
 
-import lesson11vk_inheritance.Teacher;
-
 public class App {
     public static void main(String[] args) {
-        Player vasya = new Player("Vasya", "Pupkin",10);
-        Team rangers = new Team("Rangers",1,"NewnYork", "NY");
+        Player vasya = new Player("Vasya","pupkin",10);
+        Team rangers = new Team("Rangers","NY",23);
+        Couch peterson = new Couch("Jordan","Peterson", 64);
 
-        System.out.println(vasya.getLastName());
+        System.out.println(rangers.getQuantityofPlayers());
 
     }
 }
