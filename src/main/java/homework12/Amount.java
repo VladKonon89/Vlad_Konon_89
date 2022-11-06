@@ -39,8 +39,8 @@ public class Amount implements Color {
 
     }
 
-    @Override
-    public String getColor() {
-        return null;
-    }
+//    @Override
+//    public String getColor() {
+//        return null;
+//    }
 }

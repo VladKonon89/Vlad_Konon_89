@@ -25,6 +25,7 @@ public class Tone implements Color{
 
     @Override
     public void mix() {
+        System.out.println("I'm mixing colors: "+red+" and "+red);
 
     }
 }
