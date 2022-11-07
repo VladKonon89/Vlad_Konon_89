@@ -27,15 +27,13 @@ public class App {
 //        player.remove("Jones");
 //        System.out.println(player);
 
-//                for (int i = 0;i< player.size();i++){
-//            System.out.println(player.get(i));
-//        }
+                for (int i = 0;i< player.size();i++){
+            System.out.println(player.get(i));
+        }
 //
-//        for (String color : player){
-//            System.out.println(color);
-//        }
-
-        player.forEach(x-> System.out.println(x));
+        for (String players : player){
+            System.out.println(player);
+        }
 
 
     }

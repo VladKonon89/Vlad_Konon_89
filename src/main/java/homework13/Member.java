@@ -1,5 +1,7 @@
 package homework13;
 
+import java.util.Objects;
+
 public class Member {
     public static Member jim;
     public String name;
@@ -23,4 +25,10 @@ public class Member {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString(){
+        return getName();
+    }
+
 }
