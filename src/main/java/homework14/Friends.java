@@ -1,4 +1,4 @@
-package lesson14;
+package homework14;
 
 public class Friends {
     private String name;
@@ -19,3 +19,4 @@ public class Friends {
         return getName();
     }
 }
+

@@ -1,7 +1,5 @@
 package homework14;
 
-import lesson14.Friends;
-
 import java.util.HashSet;
 import java.util.Set;
 
