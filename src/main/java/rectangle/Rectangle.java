@@ -21,4 +21,7 @@ public class Rectangle {
     public int getHeight() {
         return height;
     }
+    public final void hello(){
+        System.out.println("hello");
+    }
 }
