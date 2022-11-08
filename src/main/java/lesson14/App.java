@@ -13,6 +13,9 @@ public class App {
         colors.add("Red");
         System.out.println(colors);
         colors.add("Yellow");
+        // в сете все значения уникальны
+        // в сете нет индексов
+        // в сете нет геттеров
 
         System.out.println(colors.contains("Yellow"));
         for (String color: colors){
