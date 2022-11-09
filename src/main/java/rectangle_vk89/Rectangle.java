@@ -1,28 +1,34 @@
-package rectangle_vk89;
+//package rectangle_vk89;
+//
+//public class Rectangle {  // parent(basic or super) class
+//    private int height;
+//    private int width;
+//
+//    public Rectangle(int height, int width) {
+//        this.height = height;
+//        this.width = width;
+//    }
+//
+//    public void draw(){
+//        System.out.println("I draw a rectangle with height = "+this.height+", width = "+this.width);
+//    }
+//
+//    public int getArea(){
+//        return height*width;
+//    }
+//
+//    public int getPerimeter() {
+//        return (width + height) * 2;
+//    }
 
-public class Rectangle {  // parent(basic or super) class
-    private int height;
-    private int width;
-
-    public Rectangle(int height, int width) {
-        this.height = height;
-        this.width = width;
-    }
-
-    public void draw(){
-        System.out.println("I draw a rectangle with height = "+this.height+", width = "+this.width);
-    }
-
-    public int getArea(){
-        return height*width;
-    }
-
-    public int getPerimeter(){
-        return (width+height)*2;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-}
+//    public int getHeight() {
+//        return height;
+//    }
+//<<<<<<< HEAD:src/main/java/rectangle_vk89/Rectangle.java
+//
+//=======
+//    public final void hello(){
+//        System.out.println("hello");
+//    }
+//>>>>>>> origin/main:src/main/java/rectangle/Rectangle.java
+//}
