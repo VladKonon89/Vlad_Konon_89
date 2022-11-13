@@ -13,7 +13,7 @@ public class Address {
         this.state = state;
     }
 
-    public Address() {
+    public Address(String s, String calgary, String s1) {
     }
 
     public String getStreet1() {

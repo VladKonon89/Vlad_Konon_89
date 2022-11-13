@@ -1,4 +1,4 @@
-package homework15_vk;
+package homework15;
 
 public enum InsuranceCompanies {
     Humana,

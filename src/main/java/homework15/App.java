@@ -1,4 +1,4 @@
-package homework15_vk;
+package homework15;
 
 import java.util.ArrayList;
 import java.util.HashMap;
