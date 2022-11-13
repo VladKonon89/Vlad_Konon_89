@@ -49,7 +49,8 @@ public class App {
 
         Hospital calgaryHospital = new Hospital("Calgary Hospital",address,doctors,rooms, acceptedInsurances);
 
-        calgaryHospital.getDoctors();
+        System.out.println(calgaryHospital);
+        calgaryHospital.printDoctors();
 
     }
 

@@ -1,7 +1,5 @@
 package homework15_vk;
 
-import lesson10.Address;
-
 import java.util.List;
 import java.util.Map;
 
@@ -18,9 +16,6 @@ public class Hospital {
         this.doctors = doctors;
         this.rooms = rooms;
         this.acceptedInsurances = acceptedInsurances;
-    }
-
-    public Hospital(String calgary_hospital, homework15_vk.Address address, List<Doctor> doctors, Map<Integer, String> rooms, List<InsuranceCompanies> acceptedInsurances) {
     }
 
 
@@ -68,10 +63,14 @@ public class Hospital {
     public String toString() {
         return "Hospital{" +
                 "hospitalName='" + hospitalName + '\'' +
-                ", address=" + address +
-                ", doctors=" + doctors +
-                ", rooms=" + rooms +
-                ", acceptedInsurances=" + acceptedInsurances +
+                ",\naddress=" + address +
+                ",\ndoctors=" + doctors +
+                ",\nrooms=" + rooms +
+                ",\nacceptedInsurances=" + acceptedInsurances +
                 '}';
+    }
+
+    public void printDoctors(){
+        doctors.forEach(System.out::println);
     }
 }
