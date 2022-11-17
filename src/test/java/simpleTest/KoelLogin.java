@@ -5,15 +5,28 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class KoelLogin {
+    private WebDriver driver;
+    @BeforeMethod
+    public void startUp(){
+        System.setProperty("web.chrome.driver","chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.get("https://bbb.testpro.io");
+    }
+
+    @AfterMethod
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(100);
+        driver.quit();
+    }
     @Test
     public void loginToKoel_correctCredentials() throws InterruptedException {
-        System.setProperty("web.chrome.driver","chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://bbb.testpro.io");
-
         By emailFieldLocator = By.xpath("//*[@type='email']");
         WebElement emailField = driver.findElement(emailFieldLocator);
 
@@ -33,14 +46,9 @@ public class KoelLogin {
         WebElement homeIcon = driver.findElement(homeLocator);
 
         Assert.assertTrue(homeIcon.isDisplayed());
-
-        driver.quit();
     }
     @Test
     public void loginToKoel_incorrectCredentials() throws InterruptedException {
-        System.setProperty("web.chrome.driver","chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://bbb.testpro.io");
 
         By emailFieldLocator = By.xpath("//*[@type='email']");
         WebElement emailField = driver.findElement(emailFieldLocator);
@@ -61,7 +69,26 @@ public class KoelLogin {
         WebElement errorFrame = driver.findElement(errorLocator);
 
         Assert.assertTrue(errorFrame.isDisplayed());
+    }
+    @Test
+    public void sum(){
+        List<WebElement> elements = driver.findElements(By.tagName("button"));
+        System.out.println(elements.size());
+        driver.navigate().refresh();
+        String url = driver.getCurrentUrl();
+        System.out.println(url);
+        String title = driver.getTitle();
+        System.out.println(title);
 
-        driver.quit();
+//        blueButton.isDisplayed();
+//        blueButton.isEnabled();
+//        blueButton.isSelected();
+        WebElement blueButton = driver.findElement(By.tagName("button"));
+        String innerText = blueButton.getText();
+        System.out.println("it = "+innerText);
+        String value = blueButton.getAttribute("type");
+        System.out.println(value);
+        String bg = blueButton.getCssValue("background");
+        System.out.println(bg);
     }
 }
