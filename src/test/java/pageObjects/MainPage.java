@@ -1,8 +1,6 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -24,6 +22,23 @@ public class MainPage {
         }
     }
 
+    private WebElement getPlusBusButton(){
+        By locator = By.className("fa-plus-circle");
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+        return driver.findElement(locator);
+    }
+    private WebElement getMenuItem(){
+        return driver.findElement(By.xpath("//*[@data-testid='playlist-context-menu-create-simple']"));
+    }
+
+    private WebElement getNewPlaylist(){
+        return driver.findElement(By.xpath("//*[@class='create']/input"));
+    }
+
     public void createPlaylist(String playlistName) {
+        getPlusBusButton().click();
+        getMenuItem().click();
+        getNewPlaylist().sendKeys(playlistName);
+        getNewPlaylist().sendKeys(Keys.ENTER);
     }
 }
