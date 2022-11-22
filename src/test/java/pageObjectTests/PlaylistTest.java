@@ -1,5 +1,6 @@
 package pageObjectTests;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -29,6 +30,9 @@ public class PlaylistTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open(url);
         MainPage mainPage = loginPage.loginToApp("sim@email.com","te$t$tudent");
-        mainPage.createPlaylist("xXXXXXxx");
+
+        String playlistName = RandomStringUtils.randomAlphabetic(10);
+        System.out.println(playlistName);
+        mainPage.createPlaylist(playlistName);
     }
 }
