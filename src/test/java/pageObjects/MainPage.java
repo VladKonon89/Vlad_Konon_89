@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class MainPage extends BasePage{
@@ -58,13 +59,32 @@ public class MainPage extends BasePage{
         }
     }
 
+    private WebElement getEditField(){
+        By locator = By.xpath("//input[@name='name']");
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+        return driver.findElement(locator);
+    }
+
     public void renamePlaylist(int playlistId, String playlistName) {
         // Get Playlist
-        // Scroll to element
-        // Double click
-        // Ctrl+A
-        // Send name
-        // Wait for the second green banner - optional
+        WebElement playlist = getPlaylist(playlistId);
 
+        // Scroll to element
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", playlist);
+
+        // Double click
+        Actions actions = new Actions(driver);
+        actions.doubleClick(playlist).perform();
+
+        // Ctrl+A
+        getEditField().sendKeys(Keys.CONTROL+"A");
+
+        // Send name
+        getEditField().sendKeys(playlistName);
+        getEditField().sendKeys(Keys.ENTER);
+
+        By secondGreen = By.xpath("//*[@class='success show' and contains(text(),'Updated')]");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(secondGreen));
     }
 }
