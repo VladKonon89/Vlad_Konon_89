@@ -37,8 +37,8 @@ public class KoelLogin_VK {
 //        driver.get("https://bbb.testpro.io");
 
         // When// Testing
-        By emaiFielLocator = By.xpath("//*[@type='email']");
-        WebElement emailField = driver.findElement(emaiFielLocator);
+        By emailFieldLocator = By.xpath("//*[@type='email']");
+        WebElement emailField = driver.findElement(emailFieldLocator);
 
         By passwordFieldLocator = By.cssSelector("[type='password']");
         WebElement passwordField = driver.findElement(passwordFieldLocator);
@@ -95,7 +95,7 @@ public class KoelLogin_VK {
     }
 
     @Test
-    public void selemium(){
+    public void selenium(){
 
 //        WebElement blueButton = driver.findElement(By.tagName("button"));
         List<WebElement> elements = driver.findElements(By.tagName("button1"));
