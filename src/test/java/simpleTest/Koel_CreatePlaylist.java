@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Koel_CreatePlaylist {
@@ -51,6 +52,15 @@ public class Koel_CreatePlaylist {
         driver.findElement(By.xpath("//input[@placeholder=\"↵ to save\"]")).sendKeys(Keys.RETURN);
 
         Thread.sleep(2000);
+
+        By championPlaylistLocator = By.xpath("//*[@href=\'#!/playlist/30586\']");
+        WebElement championPlaylist = driver.findElement(championPlaylistLocator);
+
+        Assert.assertTrue(championPlaylist.isDisplayed());
+
+//        By createdIconLocator = By.xpath("class=\"success show\"");
+//        WebElement createdIcon = driver.findElement(createdIconLocator);
+//        Assert.assertTrue(createdIcon.isDisplayed());
 
         driver.quit();
 
