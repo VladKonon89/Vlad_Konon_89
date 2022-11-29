@@ -122,9 +122,10 @@ public class KoelLogin {
         Assert.assertTrue(errorFrame.isDisplayed());
     }
     @Test
-    public void sum() {
+    public void sum() throws InterruptedException {
         List<WebElement> elements = driver.findElements(By.tagName("button"));
         System.out.println(elements.size());
+//        WebElement blueButton = driver.findElement(By.tagName("button"));
         driver.navigate().refresh();
         String url = driver.getCurrentUrl();
         System.out.println(url);
@@ -135,6 +136,7 @@ public class KoelLogin {
 //        blueButton.isEnabled();
 //        blueButton.isSelected();
         WebElement blueButton = driver.findElement(By.tagName("button"));
+//        Thread.sleep(2000);
         String innerText = blueButton.getText();
         System.out.println("it = " + innerText);
         String value = blueButton.getAttribute("type");
