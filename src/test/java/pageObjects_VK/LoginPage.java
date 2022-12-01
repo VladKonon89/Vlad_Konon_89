@@ -18,11 +18,11 @@ public class LoginPage {
     }
 
     private WebElement getEmailField(){
-        return driver.findElement(By.xpath("//*[@type='email']"));
+        return driver.findElement(By.cssSelector("[type='email']"));
     }
 
     private WebElement getPasswordField(){
-        return driver.findElement(By.xpath("//*[type='password']"));
+        return driver.findElement(By.xpath("//*[@type='password']"));
     }
 
     private WebElement getLoginButton(){

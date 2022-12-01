@@ -2,20 +2,19 @@ package pageObjectTests_VK;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pageObjects.LoginPage;
 import pageObjects.MainPage;
-import pageObjects_VK.LoginPage;
 
-public class LoginToApp {
+public class PlaylistTest {
     private WebDriver driver;
     private String url;
 
     @BeforeMethod
     public void startUp() {
-        System.setProperty("web.chrome.driver", "chromedriver");
+        System.setProperty("web.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         url="https://bbb.testpro.io";
     }
@@ -25,20 +24,11 @@ public class LoginToApp {
         Thread.sleep(100);
         driver.quit();
     }
-
     @Test
-    public void loginToApp_correctCredentials(){
+    public void createPlaylist(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open(url);
-        MainPage mainPage = loginPage.loginToApp("fler1111+1@ukr.net", "te$t$tudent");
-        Assert.assertTrue(mainPage.isOpen());
-    }
-
-    @Test
-    public void loginToApp_incorrectCredentials(){
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.open(url);
-        loginPage.loginToApp("fler1111+1@ukr.net", "WrongPassword");
-        Assert.assertTrue(loginPage.isError());
+        MainPage mainPage = loginPage.loginToApp("sim@email.com","te$t$tudent");
+        mainPage.createPlaylist("xXXXXXxx");
     }
 }
