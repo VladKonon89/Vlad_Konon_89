@@ -1,6 +1,7 @@
 package pageObjects_VK;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import simpleTest.Koel_CreatePlaylist;
@@ -66,13 +67,34 @@ public class MainPage extends BasePage {
     }
 
     // HomeTask
+
+    private WebElement getEditField(){
+//        return driver.findElement(By.xpath("//*[@data-testid='inline-playlist-name-input']"));
+        By locator = By.xpath("//*[@id='playlists']/ul/li/input");
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+        return driver.findElement(locator);
+    }
     public void renamePlaylist(int playlistId, String playlistName){
         // Get Playlist
+        WebElement playlist = getPlaylist(playlistId);
+
         // Scroll to element
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeAsyncScript("arguments[0].scrollIntoView();", playlist);
+
         // Double click
+        Actions actions = new Actions(driver);
+        actions.doubleClick(playlist).perform();
+
         // Cmd+A
-        // Send name
+        getEditField().sendKeys(Keys.CONTROL+"A");
+
+        // Send playlist name
+        getEditField().sendKeys(playlistName);
+
         // Wait for the 2nd green banner - optional
+        By secondGreen = By.xpath("//*[@class='success show' and contains(text(),'Updated')]");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(secondGreen));
     }
 
 }

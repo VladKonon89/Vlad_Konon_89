@@ -155,7 +155,7 @@ public class KoelLogin_VK {
 
 
     @Test
-    public void selenium() {
+    public void sum() {
 
 //        WebElement blueButton = driver.findElement(By.tagName("button"));
         List<WebElement> elements = driver.findElements(By.tagName("button1"));

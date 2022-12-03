@@ -10,7 +10,7 @@ public class LoginToApp extends BaseTest {
     public void loginToApp_correctCredentials(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open(url);
-        MainPage mainPage = loginPage.loginToApp("fler1111+1@ukr.net", "te$t$tudent");
+        MainPage mainPage = loginPage.loginToApp(username, password);
         Assert.assertTrue(mainPage.isOpen());
     }
 
@@ -18,7 +18,7 @@ public class LoginToApp extends BaseTest {
     public void loginToApp_incorrectCredentials(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open(url);
-        loginPage.loginToApp("fler1111+1@ukr.net", "WrongPassword");
+        loginPage.loginToApp(username, "WrongPassword");
         Assert.assertTrue(loginPage.isError());
     }
 }
