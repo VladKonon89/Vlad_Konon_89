@@ -1,34 +1,41 @@
 package pageObjectTests_VK;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import com.github.javafaker.Faker;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.LoginPage;
 import pageObjects.MainPage;
 
-public class PlaylistTest {
-    private WebDriver driver;
-    private String url;
-
-    @BeforeMethod
-    public void startUp() {
-        System.setProperty("web.chrome.driver", "chromedriver.exe");
-        driver = new ChromeDriver();
-        url="https://bbb.testpro.io";
-    }
-
-    @AfterMethod
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(100);
-        driver.quit();
-    }
+public class PlaylistTest extends BaseTest {
     @Test
     public void createPlaylist(){
+        Faker faker = new Faker();
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open(url);
-        MainPage mainPage = loginPage.loginToApp("sim@email.com","te$t$tudent");
-        mainPage.createPlaylist("xXXXXXxx");
+        MainPage mainPage = loginPage.loginToApp("fler1111+1@ukr.net","te$t$tudent");
+
+//        String playlistName = RandomStringUtils.randomAlphabetic(10);  //10 длинна строки
+        String playlistName = faker.job().title();
+        System.out.println(playlistName);
+        int playlistId = mainPage.createPlaylist(playlistName);
+//        System.out.println(playlistId);
+        Assert.assertTrue(mainPage.playlistExist(playlistId,playlistName));
+    }
+
+    // HomeTask
+    @Test
+    public void renamePlaylist(){
+        Faker faker = new Faker();
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.open(url);
+        MainPage mainPage = loginPage.loginToApp("fler1111+1@ukr.net","te$t$tudent");
+        String playlistName = faker.job().title();
+        int playlistId = mainPage.createPlaylist(playlistName);
+
+        String newName = faker.artist().name();
+        mainPage.renamePlaylist(playlistId,newName);
+
+        Assert.assertTrue(mainPage.playlistExist(playlistId,newName));
+
     }
 }

@@ -5,16 +5,11 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.MainPage;
 
-public class LoginPage {
-    private WebDriver driver;
-    WebDriverWait wait;
-
+public class LoginPage extends BasePage {
     public LoginPage(WebDriver driver){
-        this.driver = driver;
-        wait = new WebDriverWait(driver,10,200);
+        super(driver);
     }
 
     private WebElement getEmailField(){
