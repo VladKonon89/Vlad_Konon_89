@@ -26,6 +26,27 @@ public class App {
         where = Directions.WEST;
         System.out.println(where);
 
+        System.out.println();
+
+        Cities place = Cities.CALGARY;
+        System.out.println(place);
+        place = Cities.CALGARY;
+        System.out.println(place);
+
+        place = Cities.MILAN;
+        System.out.println(place);
+
+        place = Cities.NAPLES;
+        System.out.println(place);
+
+        Cities placeP = Cities.PRAGUE;
+        System.out.println(placeP);
+
+        place = Cities.VIENNA;
+        System.out.println(place);
+
+        place = Cities.ROME;
+        System.out.println(place);
 
     }
 }
