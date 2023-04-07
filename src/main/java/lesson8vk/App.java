@@ -46,8 +46,8 @@ public class App {
 //
 //        alex.hello("Jane");
 
-//        kristinaCar.printInfo();
-//        myCar.printInfo();
+        kristinaCar.printInfo();
+        myCar.printInfo();
 
         anna.printMe();
         david.printMe();

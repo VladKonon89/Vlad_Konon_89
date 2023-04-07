@@ -66,14 +66,6 @@ public class App {
         nystate.admitted();
         nystate.takenFrom("Netherlands");
 
-        States texas = new States();
-
-
-        System.out.println("--------------");
-
-        City prague = new City();
-        prague.c
-
 
     }
 
