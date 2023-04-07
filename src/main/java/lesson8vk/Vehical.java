@@ -12,7 +12,12 @@ public class Vehical {
         System.out.println("Color: "+this.color);
         System.out.println("Year: "+this.year);
 
+    }
 
-
+    public void carInfo(){
+        System.out.println("Year "+year);
+        System.out.println("Color "+color);
+        System.out.println("Model "+model);
+        System.out.println("Make "+make);
     }
 }
