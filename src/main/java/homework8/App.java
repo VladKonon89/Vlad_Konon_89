@@ -1,7 +1,9 @@
 package homework8;
 
+import homework7.Cities;
+
 public class App {
-    public static void main(String[] args) {
+    public static <City> void main(String[] args) {
 //        Boxers tyson = new Boxers();
 //        tyson.lastName = "Tyson";
 //        tyson.weight = "the heavyweight division";
@@ -63,6 +65,14 @@ public class App {
 
         nystate.admitted();
         nystate.takenFrom("Netherlands");
+
+        States texas = new States();
+
+
+        System.out.println("--------------");
+
+        City prague = new City();
+        prague.c
 
 
     }
