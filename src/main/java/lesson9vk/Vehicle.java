@@ -19,7 +19,7 @@ public class Vehicle {
     //constructor can be private
 
     public Vehicle(String make, Colors color) {  //constructor// signatura Vehicle (String,Colors)
-        this.make = make;
+        this.make = make;                        // не можем создватать конструкторы с одинаковой сигнатурой
         this.color = color;
     }
 //    public Vehicle(String model, Colors color) {} //constructor// same signatura Vehicle (String,Colors) doesn't work
