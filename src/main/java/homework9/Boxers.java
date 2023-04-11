@@ -36,6 +36,7 @@ public class Boxers {
     }
 
     public void print() {
+
         System.out.println(lastname + " became a champ in " + weight + " in " + year);
     }
 
