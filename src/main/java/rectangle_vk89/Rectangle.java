@@ -1,7 +1,7 @@
 package rectangle_vk89;
 
 public class Rectangle {  // parent(basic or super) class
-    private int height;
+    private int height;   // поля private не доступны,чтобы вытащить инфу из них, но внизу есть гетер public
     private int width;
 
     public Rectangle(int height, int width) {
@@ -23,7 +23,7 @@ public class Rectangle {  // parent(basic or super) class
 
     public int getHeight() {
         return height;
-    }
+    }   // через паблик гетер можно вытащить инфу в другие чайлд классы
 //<<<<<<< HEAD:src/main/java/rectangle_vk89/Rectangle.java
 //
 //=======
