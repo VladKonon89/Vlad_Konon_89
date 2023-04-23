@@ -122,7 +122,7 @@ public class KoelLogin {
         Assert.assertTrue(errorFrame.isDisplayed());
     }
     @Test
-    public void sum() throws InterruptedException {
+    public void sum() throws InterruptedException {   // selenium
         List<WebElement> elements = driver.findElements(By.tagName("button"));
         System.out.println(elements.size());
 //        WebElement blueButton = driver.findElement(By.tagName("button"));
